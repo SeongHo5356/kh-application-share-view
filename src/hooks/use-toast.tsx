@@ -1,5 +1,6 @@
 
 // This file creates a toast hook and utilities to avoid circular dependencies
+import * as React from "react";
 import { useState, useEffect, createContext, useContext } from "react";
 import type { 
   ToastActionElement, 
