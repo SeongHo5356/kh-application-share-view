@@ -22,8 +22,8 @@ export interface ApiResponse {
 
 export const fetchApplicationData = async (applicationId: string): Promise<ApplicationData> => {
   try {
-    // Replace this URL with your actual Spring Boot API endpoint
-    const response = await fetch(`https://your-spring-boot-api.com/api/applications/${applicationId}`);
+    // Updated API endpoint
+    const response = await fetch(`https://itsmeweb.store/api/application/detail?applicationId=${applicationId}`);
     
     if (!response.ok) {
       throw new Error(`API request failed with status ${response.status}`);
