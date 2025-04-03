@@ -1,5 +1,4 @@
 
-// This file creates a toast hook and utilities to avoid circular dependencies
 import * as React from "react";
 import { useState, useEffect, createContext, useContext } from "react";
 import type { 
@@ -177,9 +176,12 @@ export const useToast = () => {
     };
   }
 
-  return { toast };
+  // Return the context state along with the toast function
+  const { state } = useContext(ToastContext);
+  return { toast, state };
 };
 
+// Export a standalone toast function, but not used in Toaster component
 export const toast = ({ ...props }: Omit<ToasterToast, "id">) => {
   const { toast } = useToast();
   return toast(props);

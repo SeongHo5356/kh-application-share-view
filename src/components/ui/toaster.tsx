@@ -10,9 +10,8 @@ import {
 } from "@/components/ui/toast"
 
 export function Toaster() {
-  const { toast } = useToast()
-  const { state } = toast || { state: { toasts: [] } }
-
+  const { state } = useToast()
+  
   return (
     <ToastProvider>
       {state.toasts.map(function ({ id, title, description, action, ...props }) {
