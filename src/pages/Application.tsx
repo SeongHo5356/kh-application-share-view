@@ -16,13 +16,15 @@ const Application = () => {
   const { data: application, isLoading, error } = useQuery({
     queryKey: ['application', id],
     queryFn: () => id ? fetchApplicationData(id) : getMockApplicationData(),
-    onError: (err) => {
-      toast({
-        title: "오류 발생",
-        description: "신청서 정보를 불러오는데 문제가 발생했습니다.",
-        variant: "destructive",
-      });
-      console.error("Failed to load application data", err);
+    meta: {
+      onError: (err: Error) => {
+        toast({
+          title: "오류 발생",
+          description: "신청서 정보를 불러오는데 문제가 발생했습니다.",
+          variant: "destructive",
+        });
+        console.error("Failed to load application data", err);
+      },
     },
   });
 
