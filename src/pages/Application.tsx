@@ -84,7 +84,7 @@ const Application = () => {
         
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-khu-green">강의실 예약 정보</h2>
+            <h2 className="text-xl font-bold text-blue-500">강의실 예약 정보</h2>
             <ApplicationStatusBadge status={application.applicationStatus} />
           </div>
           
@@ -122,7 +122,7 @@ const Application = () => {
             <ApplicationInfoItem 
               icon="file" 
               label="신청서 파일" 
-              value="신청서 다운로드" 
+              value="신청서 보기"
               url={application.applicationUrl} 
             />
           </div>
