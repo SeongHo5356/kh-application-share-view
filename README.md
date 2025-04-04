@@ -9,10 +9,10 @@
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/SeongHo5356/kh-application-share-view.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd kh-application-share-view
 
 # Step 3: Install the necessary dependencies.
 npm i
