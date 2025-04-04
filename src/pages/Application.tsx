@@ -94,11 +94,11 @@ const Application = () => {
               label="신청자" 
               value={application.userName} 
             />
-            <ApplicationInfoItem 
-              icon="phone" 
-              label="연락처" 
-              value={application.userNumber} 
-            />
+            {/*<ApplicationInfoItem */}
+            {/*  icon="phone" */}
+            {/*  label="연락처" */}
+            {/*  value={application.userNumber} */}
+            {/*/>*/}
             <ApplicationInfoItem 
               icon="location" 
               label="강의실" 
@@ -119,12 +119,12 @@ const Application = () => {
               label="예약 시간" 
               value={`${formatTime(application.applicationStart)} - ${formatTime(application.applicationEnd)}`} 
             />
-            <ApplicationInfoItem 
-              icon="file" 
-              label="신청서 파일" 
-              value="신청서 보기"
-              url={application.applicationUrl} 
-            />
+            {/*<ApplicationInfoItem */}
+            {/*  icon="file" */}
+            {/*  label="신청서 파일" */}
+            {/*  value="신청서 보기"*/}
+            {/*  url={application.applicationUrl} */}
+            {/*/>*/}
           </div>
           
           {application.applicationStatus === "REJECTED" && application.applicationRejectReason && (
